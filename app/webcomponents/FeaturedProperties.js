@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FeaturedProperties = () => {
+const FeaturedProperties = (props) => {
   const properties = [
     {
       name: 'Skyline Tower',
@@ -66,7 +66,7 @@ const FeaturedProperties = () => {
 
   return (
     <section style={styles.section}>
-      <h2 style={styles.heading}>Featured Properties</h2>
+      <h2 style={styles.heading}>{props.name}</h2>
       <div style={styles.grid}>
         {properties.map((property, index) => (
           <div key={index} style={styles.card}>

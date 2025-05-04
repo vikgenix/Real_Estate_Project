@@ -7,7 +7,7 @@ const Navbar = () => {
       <div style={styles.logo}>Havn</div>
       <ul style={styles.menu}>
         
-        <Link href="/pages">Buy</Link>
+        <Link href="/buy">Buy</Link>
         <Link href="/rent">Rent</Link>
         <Link href="/sell">Sell</Link>
         <Link href="/about">About</Link>

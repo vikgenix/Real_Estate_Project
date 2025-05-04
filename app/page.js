@@ -19,7 +19,7 @@ export default function Home() {
       <HomesForYou />
       <LocalExpertise />
       <Partners />
-      <FeaturedProperties />
+      <FeaturedProperties name="Featured Properties" />
       <DiscoverSection />
       <Testimonials />
       <Team />
