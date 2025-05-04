@@ -13,7 +13,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
-import Card from '../webcomponents/FeaturedProperties'
+import Card from "../webcomponents/FeaturedProperties";
 
 export default function Buy() {
   const items = [
@@ -70,7 +70,7 @@ export default function Buy() {
         <main>
           <SidebarTrigger />
           {/* {children} */}
-          <Card name="Properties to Buy"/>
+          <Card name="Properties to Buy" />
         </main>
       </SidebarProvider>
 

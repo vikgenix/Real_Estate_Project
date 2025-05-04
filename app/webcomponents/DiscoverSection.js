@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const DiscoverSection = () => {
   return (
@@ -6,7 +6,8 @@ const DiscoverSection = () => {
       <div style={styles.content}>
         <h2 style={styles.heading}>Discover Your Dream Home</h2>
         <p style={styles.text}>
-          Browse thousands of listings from across the country and find the property that feels like home.
+          Browse thousands of listings from across the country and find the
+          property that feels like home.
         </p>
         <button style={styles.button}>Start Exploring</button>
       </div>
@@ -23,47 +24,47 @@ const DiscoverSection = () => {
 
 const styles = {
   section: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    alignItems: 'center',
-    padding: '4rem 2rem',
-    backgroundColor: '#f5f5f5',
-    gap: '2rem',
-    justifyContent: 'center'
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "center",
+    padding: "4rem 2rem",
+    backgroundColor: "#f5f5f5",
+    gap: "2rem",
+    justifyContent: "center",
   },
   content: {
-    flex: '1 1 400px',
-    textAlign: 'left',
-    maxWidth: '500px'
+    flex: "1 1 400px",
+    textAlign: "left",
+    maxWidth: "500px",
   },
   heading: {
-    fontSize: '28px',
-      marginBottom: '1rem',
-    color: '#333',
+    fontSize: "28px",
+    marginBottom: "1rem",
+    color: "#333",
   },
   text: {
-    fontSize: '16px',
-    color: '#444',
-    marginBottom: '1.5rem'
+    fontSize: "16px",
+    color: "#444",
+    marginBottom: "1.5rem",
   },
   button: {
     padding: "10px 20px",
-        backgroundColor: "#000",
-        color: "white",
-        border: "2px solid #ffffff",
-        borderRadius: "50px",
-        cursor: "pointer",
-        marginRight: "30px"
-    },
+    backgroundColor: "#000",
+    color: "white",
+    border: "2px solid #ffffff",
+    borderRadius: "50px",
+    cursor: "pointer",
+    marginRight: "30px",
+  },
   imageContainer: {
-    flex: '1 1 400px',
-    maxWidth: '500px'
+    flex: "1 1 400px",
+    maxWidth: "500px",
   },
   image: {
-    width: '100%',
-    borderRadius: '12px',
-    boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
-  }
+    width: "100%",
+    borderRadius: "12px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+  },
 };
 
 export default DiscoverSection;
