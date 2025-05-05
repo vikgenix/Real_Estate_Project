@@ -53,8 +53,6 @@ export default function SidebarLayout({ component }) {
           {component}
         </main>
       </SidebarProvider>
-
-     
     </>
   );
 }

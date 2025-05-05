@@ -23,7 +23,6 @@ export default function Home() {
       <DiscoverSection />
       <Testimonials />
       <Team />
-      <Footer />
     </div>
   );
 }

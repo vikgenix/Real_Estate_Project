@@ -11,7 +11,7 @@ function page() {
         component={
           <>
             <FeaturedProperties name="Featured Properties" />
-            <Footer />
+  
           </>
         }
       />

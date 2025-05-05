@@ -2,19 +2,22 @@ import React from "react";
 import Card from "../webcomponents/Card";
 import Sidebar from "../webcomponents/Sidebar";
 import Footer from "../webcomponents/Footer";
+import FeaturedProperties from "../webcomponents/FeaturedProperties";
+import LineChart from "../webcomponents/Graph";
 
-function housedash() {
-    const sidebarItems = [
-      { title: "Home", url: "/home" },
-      { title: "Dashboard", url: "/dashboard" },
-      { title: "Settings", url: "/settings" },
-    ];
+function page() {
   return (
     <div>
-          <Sidebar children={Footer} />
-      
+      <Sidebar
+        component={
+          <>
+            <FeaturedProperties name="Featured Properties" />
+            <LineChart className/>
+          </>
+        }
+      />
     </div>
   );
 }
 
-export default housedash;
+export default page;
