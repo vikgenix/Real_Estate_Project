@@ -1,80 +1,22 @@
 import React from "react";
-import Navbar from "../webcomponents/Navbar";
+import Card from "../webcomponents/Card";
+import Sidebar from "../webcomponents/Sidebar";
 import Footer from "../webcomponents/Footer";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/components/ui/sidebar";
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
-import Card from "../webcomponents/FeaturedProperties";
+import FeaturedProperties from "../webcomponents/FeaturedProperties";
 
-export default function Buy() {
-  const items = [
-    {
-      title: "Home",
-      url: "#",
-      icon: Home,
-    },
-    {
-      title: "Inbox",
-      url: "#",
-      icon: Inbox,
-    },
-    {
-      title: "Calendar",
-      url: "#",
-      icon: Calendar,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: Search,
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings,
-    },
-  ];
+function page() {
   return (
-    <>
-      <SidebarProvider>
-        <Sidebar>
-          <SidebarContent>
-            <SidebarGroup>
-              <SidebarGroupLabel>Dashbord</SidebarGroupLabel>
-              <SidebarGroupContent>
-                <SidebarMenu>
-                  {items.map((item) => (
-                    <SidebarMenuItem key={item.title}>
-                      <SidebarMenuButton asChild>
-                        <a href={item.url}>
-                          <item.icon />
-                          <span>{item.title}</span>
-                        </a>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  ))}
-                </SidebarMenu>
-              </SidebarGroupContent>
-            </SidebarGroup>
-          </SidebarContent>
-        </Sidebar>
-        <main>
-          <SidebarTrigger />
-          {/* {children} */}
-          <Card name="Properties to Buy" />
-        </main>
-      </SidebarProvider>
-
-      <Footer />
-    </>
+    <div>
+      <Sidebar
+        component={
+          <>
+            <FeaturedProperties name="Featured Properties" />
+            <Footer />
+          </>
+        }
+      />
+    </div>
   );
 }
+
+export default page;

@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <section style={styles.hero}>
       <div style={styles.content}>
-        <p style={styles.label}>#LuxuryHomes</p>
+        <p style={styles.label}>#Havn</p>
         <h1 style={styles.title}>Enjoy The Finest Homes</h1>
         <div style={styles.searchBar}>
           <input
