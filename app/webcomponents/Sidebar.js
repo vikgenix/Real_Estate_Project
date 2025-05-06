@@ -48,7 +48,11 @@ export default function SidebarLayout({ component }) {
           </SidebarContent>
         </Sidebar>
 
-        <main>
+        <main
+          style={{
+            width: "100%",
+          }}
+        >
           <SidebarTrigger />
           {component}
         </main>

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Sidebar } from "@/components/ui/sidebar";
 
 const Navbar = () => {
   return (
