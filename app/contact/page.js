@@ -54,6 +54,9 @@ const Contact = () => {
           </div>
         </>
       }
+      bgImage={
+        "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      }
     />
   );
 };
@@ -63,7 +66,7 @@ const styles = {
     maxWidth: "600px",
     margin: "4rem auto",
     padding: "2rem",
-    backgroundColor: "#fff",
+    backgroundColor: "rgba(260, 260, 250, 0.5)",
     borderRadius: "12px",
     boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
   },

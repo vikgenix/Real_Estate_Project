@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/sidebar";
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 
-export default function SidebarLayout({ component }) {
+export default function SidebarLayout({ component, bgImage}) {
   const items = [
     { title: "Home", url: "/", icon: Home },
     { title: "Inbox", url: "#", icon: Inbox },
@@ -51,6 +51,7 @@ export default function SidebarLayout({ component }) {
         <main
           style={{
             width: "100%",
+            backgroundImage: `url(${bgImage})`,
           }}
         >
           <SidebarTrigger />

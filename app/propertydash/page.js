@@ -11,7 +11,7 @@ function page() {
       <Sidebar
         component={
           <>
-            <FeaturedProperties name="Featured Properties" />
+            
             <LineChart className/>
           </>
         }

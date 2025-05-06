@@ -54,6 +54,9 @@ const About = () => {
             </div>
           </>
         }
+        bgImage={
+          "https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        }
       />
     </>
   );
