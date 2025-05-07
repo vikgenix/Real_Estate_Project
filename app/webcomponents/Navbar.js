@@ -13,7 +13,9 @@ const Navbar = () => {
         <Link href="/about">About</Link>
         <Link href="/contact">Contact</Link>
       </ul>
-      <button style={styles.button}>Login</button>
+      <Link href="/login">
+        <button style={styles.button}>Login</button>
+      </Link>
     </nav>
   );
 };
