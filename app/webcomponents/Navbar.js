@@ -1,21 +1,60 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Sidebar } from "@/components/ui/sidebar";
 
 const Navbar = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <nav style={styles.nav}>
-      <div style={styles.logo}>Havn</div>
-      <ul style={styles.menu}>
-        <Link href="/buy">Buy</Link>
-        <Link href="/buy">Rent</Link>
-        <Link href="/sell">Sell</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
-      </ul>
-      <Link href="/login">
-        <button style={styles.button}>Login</button>
-      </Link>
+      <div style={styles.left}>
+        <div style={styles.logo}>Havn</div>
+        {isMobile && (
+          <button onClick={toggleMenu} style={styles.hamburger}>
+            ☰
+          </button>
+        )}
+      </div>
+
+      {(menuOpen || !isMobile) && (
+        <ul style={{ ...styles.menu, ...(isMobile ? styles.menuMobile : {}) }}>
+          <li>
+            <Link href="/buy">Buy</Link>
+          </li>
+          <li>
+            <Link href="/buy">Rent</Link>
+          </li>
+          <li>
+            <Link href="/sell">Sell</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
+        </ul>
+      )}
+
+      {!isMobile && (
+        <Link href="/login">
+          <button style={styles.button}>Login</button>
+        </Link>
+      )}
     </nav>
   );
 };
@@ -31,11 +70,23 @@ const styles = {
     position: "sticky",
     top: 0,
     zIndex: 1000,
+    flexWrap: "wrap",
+  },
+  left: {
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
   },
   logo: {
     fontSize: "24px",
     fontWeight: "bold",
     color: "#000",
+  },
+  hamburger: {
+    fontSize: "24px",
+    background: "none",
+    border: "none",
+    cursor: "pointer",
   },
   menu: {
     display: "flex",
@@ -45,6 +96,12 @@ const styles = {
     padding: 0,
     color: "#333",
   },
+  menuMobile: {
+    flexDirection: "column",
+    width: "100%",
+    marginTop: "1rem",
+    gap: "1rem",
+  },
   button: {
     padding: "10px 20px",
     backgroundColor: "#000",
@@ -52,7 +109,7 @@ const styles = {
     border: "2px solid #ffffff",
     borderRadius: "50px",
     cursor: "pointer",
-    marginRight: "30px",
+    marginLeft: "1rem",
   },
 };
 

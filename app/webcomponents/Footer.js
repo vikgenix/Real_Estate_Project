@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -7,16 +8,31 @@ const Footer = () => {
         <div style={styles.column}>
           <h3 style={styles.title}>PrimeEstates</h3>
           <p style={styles.text}>
-            Your trusted partner in buying, selling, and renting properties worldwide.
+            Your trusted partner in buying, selling, and renting properties
+            worldwide.
           </p>
         </div>
         <div style={styles.column}>
           <h4 style={styles.subtitle}>Quick Links</h4>
           <ul style={styles.list}>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Buy</a></li>
-            <li><a href="#">Rent</a></li>
-            <li><a href="#">Sell</a></li>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <Link href="/buy">
+              <li>
+                Buy
+              </li>
+            </Link>
+            <Link href="/buy">
+            <li>
+              Rent
+            </li>
+            </Link>
+            <Link href="/sell">
+            <li>
+              Sell
+              </li>
+            </Link>
           </ul>
         </div>
         <div style={styles.column}>

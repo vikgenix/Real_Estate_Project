@@ -15,15 +15,15 @@ const HeroSection = () => {
           <button style={styles.button}>Search</button>
         </div>
         <div style={styles.stats}>
-          <div>
+          <div style={styles.statItem}>
             <h3>683</h3>
             <p>Properties</p>
           </div>
-          <div>
+          <div style={styles.statItem}>
             <h3>5K+</h3>
             <p>Customers</p>
           </div>
-          <div>
+          <div style={styles.statItem}>
             <h3>520+</h3>
             <p>New Listings</p>
           </div>
@@ -37,17 +37,20 @@ const styles = {
   hero: {
     background:
       '#333 url("https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") center/cover no-repeat',
-    height: "90vh",
+    minHeight: "90vh",
     color: "white",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    padding: "1rem",
   },
   content: {
     textAlign: "center",
-    backgroundColor: "rgba(0,0,0,0.5)",
+    backgroundColor: "rgba(0,0,0,0.6)",
     padding: "2rem",
     borderRadius: "10px",
+    width: "100%",
+    maxWidth: "800px",
   },
   label: {
     fontSize: "14px",
@@ -55,19 +58,22 @@ const styles = {
     color: "#ccc",
   },
   title: {
-    fontSize: "36px",
+    fontSize: "2.5rem",
     margin: "1rem 0",
   },
   searchBar: {
     display: "flex",
+    flexWrap: "wrap",
     justifyContent: "center",
     margin: "1rem 0",
   },
   input: {
     padding: "0.6rem 1rem",
-    width: "300px",
+    width: "100%",
+    maxWidth: "300px",
     border: "none",
     borderRadius: "5px 0 0 5px",
+    fontSize: "1rem",
   },
   button: {
     padding: "0.6rem 1rem",
@@ -76,12 +82,18 @@ const styles = {
     border: "none",
     borderRadius: "0 5px 5px 0",
     cursor: "pointer",
+    fontSize: "1rem",
   },
   stats: {
     display: "flex",
-    justifyContent: "center",
-    gap: "2rem",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    gap: "1.5rem",
     marginTop: "2rem",
+  },
+  statItem: {
+    flex: "1 1 100px",
+    minWidth: "100px",
   },
 };
 
