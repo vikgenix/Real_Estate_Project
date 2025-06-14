@@ -19,9 +19,9 @@ export default function Page() {
             {/* Dashboard Cards */}
             <div style={styles.cardGrid}>
               <DashCard
-                title="Total Properties"
-                value="1,000"
-                description="Properties Listed"
+                title="Property Views"
+                value="10,000"
+                description="people viewed your property"
               />
               <DashCard
                 title="Total Agents"
@@ -31,7 +31,7 @@ export default function Page() {
               <DashCard
                 title="Total Users"
                 value="5,000"
-                description="Users Registered"
+                description="Users Registered to Buy Property"
               />
             </div>
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const DiscoverSection = () => {
   return (
@@ -9,7 +10,9 @@ const DiscoverSection = () => {
           Browse thousands of listings from across the country and find the
           property that feels like home.
         </p>
-        <button style={styles.button}>Start Exploring</button>
+        <Link href="../buy">
+          <button style={styles.button}>Start Exploring</button>
+        </Link>
       </div>
       <div style={styles.imageContainer}>
         <img

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Link from "next/link";
 const LocalExpertise = () => {
   return (
     <section style={styles.section}>
@@ -10,7 +10,13 @@ const LocalExpertise = () => {
             Our agents have deep knowledge of your local area and access to exclusive global listings.
             Whether you're buying or selling, we ensure the process is smooth and successful.
           </p>
-          <button style={styles.button}>Explore More</button>
+         
+          <button style={styles.button}>
+             <Link href="../buy">
+              Explore More
+              </Link>
+          </button>
+          
         </div>
         <img src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2g" alt="Local expertise" style={styles.image} />
       </div>
