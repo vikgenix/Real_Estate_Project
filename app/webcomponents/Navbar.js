@@ -1,6 +1,13 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import {
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -36,7 +43,7 @@ const Navbar = () => {
             <Link href="/buy">Buy</Link>
           </li>
           <li>
-            <Link href="/buy">Rent</Link>
+            <Link href="/rent">Rent</Link>
           </li>
           <li>
             <Link href="/sell">Sell</Link>
@@ -51,9 +58,21 @@ const Navbar = () => {
       )}
 
       {!isMobile && (
-        <Link href="/login">
-          <button style={styles.button}>Login</button>
-        </Link>
+        <>
+          <SignedOut>
+            <div style={styles.authButtons}>
+              <SignInButton mode="modal">
+                <button style={styles.button}>Sign In</button>
+              </SignInButton>
+              <SignUpButton mode="modal">
+                <button style={styles.button}>Sign Up</button>
+              </SignUpButton>
+            </div>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+        </>
       )}
     </nav>
   );
@@ -109,6 +128,10 @@ const styles = {
     border: "2px solid #ffffff",
     borderRadius: "50px",
     cursor: "pointer",
+  },
+  authButtons: {
+    display: "flex",
+    gap: "1rem",
     marginLeft: "1rem",
   },
 };
