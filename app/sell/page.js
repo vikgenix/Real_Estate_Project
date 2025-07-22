@@ -13,6 +13,7 @@ export default function SellPage() {
     imageUrl: "",
     description: "",
   });
+  const data = []
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -22,6 +23,7 @@ export default function SellPage() {
     e.preventDefault();
     console.log("Submitted Property:", form);
     alert("Property submitted successfully!");
+    data.push(form);
     setForm({
       title: "",
       price: "",
@@ -29,6 +31,7 @@ export default function SellPage() {
       imageUrl: "",
       description: "",
     });
+    console.log("Current Data:", data);
   };
 
   return (

@@ -60,7 +60,7 @@ export default function Home() {
     <div>
       <Navbar />
       <HeroSection />
-      <Categories />
+      {/* <Categories /> */}
       <HomesForYou />
       <LocalExpertise />
       <Partners />
