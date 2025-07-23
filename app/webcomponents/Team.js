@@ -3,20 +3,23 @@ import React from 'react';
 const Team = () => {
   const teamMembers = [
     {
-      name: 'Ava Carter',
-      role: 'Lead Agent',
-      image: '/agent1.jpg'
+      name: "Ava Carter",
+      role: "Lead Agent",
+      image:
+        "https://i.pinimg.com/736x/70/d3/90/70d39088fe524ca0fae1e390262eb545.jpg",
     },
     {
-      name: 'Daniel Smith',
-      role: 'Property Consultant',
-      image: '/agent2.jpg'
+      name: "Margot Robbie",
+      role: "Property Consultant",
+      image:
+        "https://static.businessworld.in/Screenshot%202025-06-21%20111543_20250621111553_original_image_39.webp",
     },
     {
-      name: 'Sophia Bennett',
-      role: 'Marketing Manager',
-      image: '/agent3.jpg'
-    }
+      name: "Soham Parekh",
+      role: "Marketing Manager",
+      image:
+        "https://static.businessworld.in/Untitled%20design%20-%202025-07-04T111127.196_20250704112226_original_image_6.webp",
+    },
   ];
 
   return (
@@ -25,7 +28,7 @@ const Team = () => {
       <div style={styles.grid}>
         {teamMembers.map((member, index) => (
           <div key={index} style={styles.card}>
-            <img src={"https://i.pinimg.com/736x/70/d3/90/70d39088fe524ca0fae1e390262eb545.jpg"} alt={member.name} style={styles.image} />
+            <img src={ member.image} alt={member.name} style={styles.image} />
             <h3 style={styles.name}>{member.name}</h3>
             <p style={styles.role}>{member.role}</p>
           </div>
