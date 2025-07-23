@@ -6,14 +6,14 @@ const HeroSection = () => {
       <div style={styles.content}>
         <p style={styles.label}>#Havn</p>
         <h1 style={styles.title}>Enjoy The Finest Homes</h1>
-        <div style={styles.searchBar}>
+        {/* <div style={styles.searchBar}>
           <input
             type="text"
             placeholder="Search location, property..."
             style={styles.input}
           />
           <button style={styles.button}>Search</button>
-        </div>
+        </div> */}
         <div style={styles.stats}>
           <div style={styles.statItem}>
             <h3>683</h3>
